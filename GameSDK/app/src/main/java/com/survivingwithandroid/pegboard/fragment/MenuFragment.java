@@ -94,6 +94,25 @@ public class MenuFragment extends Fragment {
 			  ( (MenuEventListener) getActivity()).onClearSelected();
 			}
 		});
+
+		// loadDesign Btn
+		final TextView loadTxt = (TextView) v.findViewById(id.loadDesign);
+		final Animation animLoad = TableConfig.getRotateAnim(this.getActivity());
+		animLoad.setAnimationListener(new Animation.AnimationListener() {
+
+			@Override
+			public void onAnimationStart(Animation animation) {
+			}
+
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+			}
+
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				( (MenuEventListener) getActivity()).onLoadDesign();
+			}
+		});
 		
 		// Background btn
 		final TextView bkgTxt = (TextView) v.findViewById(R.id.bkgTxt);
@@ -130,6 +149,14 @@ public class MenuFragment extends Fragment {
 			@Override
 			public void onClick(View v) {
 				saveTxt.startAnimation(animSave);
+			}
+		});
+
+		loadTxt.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				loadTxt.startAnimation(animLoad);
 			}
 		});
 		
@@ -207,6 +234,7 @@ public class MenuFragment extends Fragment {
 		public void onClearSelected();
 		public void onSaveSelected();
 		public void onBackgroundSelected();
+		public void onLoadDesign();
 	}
 
 }

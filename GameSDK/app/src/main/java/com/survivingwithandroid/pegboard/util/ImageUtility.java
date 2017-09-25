@@ -50,9 +50,9 @@ public class ImageUtility {
 			throws SaveFileException {
 
 		ContextWrapper cw = new ContextWrapper(context);
-		// path to /data/data/yourapp/app_data/imageDir
+		// path to imageDir - @ app specific locatiom
 		File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-		// Create imageDir
+		// Create default image to be saved and loaded
 		File mypath = new File(directory, "design.png");
 
 		FileOutputStream fos = null;

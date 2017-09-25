@@ -204,6 +204,15 @@ public class DreamPinsActivity extends Activity implements
 
 	}
 
+	@Override
+	public void onLoadDesign() {
+
+		closeMenu();
+		Intent intent = new Intent(this, LoadDesignActivity.class);
+		startActivity(intent);
+
+	}
+
 	public void onBackgroundSelected() {
 		LayoutInflater inf = (LayoutInflater) this
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

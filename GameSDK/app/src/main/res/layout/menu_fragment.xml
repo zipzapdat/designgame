@@ -42,7 +42,7 @@
     				android:stretchMode="columnWidth"
     				android:layout_below="@id/lblMenu"
     				android:layout_centerHorizontal="true"/>
-    
+
     
     <TextView android:id="@+id/saveTxt"
      				android:layout_width="wrap_content" 
@@ -62,14 +62,23 @@
    					android:layout_alignBaseline="@id/saveTxt"
    					style="@style/PinMenuBtnClr"
    					/>
- 
+
+
+	<TextView android:id="@+id/loadDesign"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/menu_load"
+					android:layout_centerHorizontal="true"
+					android:layout_below="@id/saveTxt"
+					style="@style/PinMenuBtnLoad"
+					/>
     
     <TextView android:id="@+id/bkgTxt"
      				android:layout_width="wrap_content" 
    					android:layout_height="wrap_content"
    					android:text="@string/menu_bkg"   					
    					android:layout_centerHorizontal="true"
-   					android:layout_below="@id/saveTxt"
+   					android:layout_below="@id/loadDesign"
    					style="@style/PinMenuBtnBkg"
    					/>
      
