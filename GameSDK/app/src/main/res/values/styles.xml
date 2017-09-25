@@ -53,8 +53,8 @@
     </style>
 
     <style name="PinMenuBtnLoad" parent="PinBtnStyle">
-        <item name="android:shadowColor">@color/col_red</item>
-        <item name="android:textColor">#FF6633</item>
+        <item name="android:shadowColor">@color/col_green</item>
+        <item name="android:textColor">#66FF33</item>
     </style>
 
     <style name="PinMenuBtnBkg" parent="PinBtnStyle">
