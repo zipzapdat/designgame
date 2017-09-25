@@ -11,6 +11,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
+import android.content.Context;
+import android.content.ContextWrapper;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -44,9 +47,9 @@ public class FileSyncManager
 	
 	public void putZipZapData() {
 		
-//		ContextWrapper cw = new ContextWrapper(activity);
-//		File directory = cw.getDir(this.backupDir, Context.MODE_PRIVATE);
-		File mypath = new File(this.backupDir+"/"+this.backupFile);
+		ContextWrapper cw = new ContextWrapper(activity);
+		File directory = cw.getDir(this.backupDir, Context.MODE_PRIVATE);
+		File mypath = new File(directory+"/"+this.backupFile);
 		byte[] fileData = null;
 
 		try {
